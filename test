@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Οι Τρεις Φίλοι και η Μεγάλη Περιπέτεια</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #1e293b, #020617);
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .summary {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .lang-buttons {
+      margin-top: 25px;
+    }
+
+    .lang-buttons button {
+      background: #f59e0b;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      margin: 0 8px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .lang-buttons button:hover {
+      background: #fbbf24;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .chapter {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 14px;
+      transition: 0.2s;
+    }
+
+    .chapter:hover {
+      background: #334155;
+    }
+
+    .chapter a {
+      color: #fbbf24;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title" id="title">Οι Τρεις Φίλοι και η Μεγάλη Περιπέτεια</div>
+    <div class="author" id="author">Συγγραφέας: Γκαγκαντίπ Σινγκχ</div>
+    <div class="summary" id="summary">
+      Τρεις φίλοι, ένας μυστικός χάρτης και η μεγαλύτερη περιπέτεια της ζωής τους.
+      Η φιλία τους είναι ο αληθινός θησαυρός!
+    </div>
+
+    <div class="lang-buttons">
+      <button onclick="setLanguage('el')">Ελληνικά</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-title" id="chaptersTitle">📚 Κεφάλαια</div>
+
+    <div class="chapter"><a href="#" id="ch1">Κεφάλαιο 1 – Η Αρχή της Φιλίας</a></div>
+    <div class="chapter"><a href="#" id="ch2">Κεφάλαιο 2 – Το Μυστικό στο Πάρκο</a></div>
+    <div class="chapter"><a href="#" id="ch3">Κεφάλαιο 3 – Ο Παλιός Χάρτης</a></div>
+    <div class="chapter"><a href="#" id="ch4">Κεφάλαιο 4 – Η Απόφαση</a></div>
+    <div class="chapter"><a href="#" id="ch5">Κεφάλαιο 5 – Το Δάσος</a></div>
+    <div class="chapter"><a href="#" id="ch6">Κεφάλαιο 6 – Το Μυστικό Σπίτι</a></div>
+    <div class="chapter"><a href="#" id="ch7">Κεφάλαιο 7 – Η Δοκιμασία της Φιλίας</a></div>
+    <div class="chapter"><a href="#" id="ch8">Κεφάλαιο 8 – Η Μεγάλη Ανακάλυψη</a></div>
+    <div class="chapter"><a href="#" id="ch9">Κεφάλαιο 9 – Η Επιστροφή</a></div>
+    <div class="chapter"><a href="#" id="ch10">Κεφάλαιο 10 – Οι Τρεις Φίλοι για Πάντα</a></div>
+  </div>
+
+  <div class="footer" id="footer">
+    Οι Τρεις Φίλοι © Γκαγκαντίπ Σινγκχ
+  </div>
+
+  <script>
+    const translations = {
+      el: {
+        title: "Οι Τρεις Φίλοι και η Μεγάλη Περιπέτεια",
+        author: "Συγγραφέας: Γκαγκαντίπ Σινγκχ",
+        summary: "Τρεις φίλοι, ένας μυστικός χάρτης και η μεγαλύτερη περιπέτεια της ζωής τους. Η φιλία τους είναι ο αληθινός θησαυρός!",
+        chaptersTitle: "📚 Κεφάλαια",
+        ch1: "Κεφάλαιο 1 – Η Αρχή της Φιλίας",
+        ch2: "Κεφάλαιο 2 – Το Μυστικό στο Πάρκο",
+        ch3: "Κεφάλαιο 3 – Ο Παλιός Χάρτης",
+        ch4: "Κεφάλαιο 4 – Η Απόφαση",
+        ch5: "Κεφάλαιο 5 – Το Δάσος",
+        ch6: "Κεφάλαιο 6 – Το Μυστικό Σπίτι",
+        ch7: "Κεφάλαιο 7 – Η Δοκιμασία της Φιλίας",
+        ch8: "Κεφάλαιο 8 – Η Μεγάλη Ανακάλυψη",
+        ch9: "Κεφάλαιο 9 – Η Επιστροφή",
+        ch10: "Κεφάλαιο 10 – Οι Τρεις Φίλοι για Πάντα",
+        footer: "Οι Τρεις Φίλοι © Γκαγκαντίπ Σινγκχ"
+      },
+      en: {
+        title: "The Three Friends and the Great Adventure",
+        author: "Author: Gagandeep Singh",
+        summary: "Three friends, one secret map, and the greatest adventure of their lives. Their friendship is the true treasure!",
+        chaptersTitle: "📚 Chapters",
+        ch1: "Chapter 1 – The Beginning of Friendship",
+        ch2: "Chapter 2 – The Secret in the Park",
+        ch3: "Chapter 3 – The Old Map",
+        ch4: "Chapter 4 – The Decision",
+        ch5: "Chapter 5 – The Forest",
+        ch6: "Chapter 6 – The Secret House",
+        ch7: "Chapter 7 – The Test of Friendship",
+        ch8: "Chapter 8 – The Great Discovery",
+        ch9: "Chapter 9 – The Return",
+        ch10: "Chapter 10 – The Three Friends Forever",
+        footer: "The Three Friends © Gagandeep Singh"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById("title").textContent = translations[lang].title;
+      document.getElementById("author").textContent = translations[lang].author;
+      document.getElementById("summary").textContent = translations[lang].summary;
+      document.getElementById("chaptersTitle").textContent = translations[lang].chaptersTitle;
+      document.getElementById("ch1").textContent = translations[lang].ch1;
+      document.getElementById("ch2").textContent = translations[lang].ch2;
+      document.getElementById("ch3").textContent = translations[lang].ch3;
+      document.getElementById("ch4").textContent = translations[lang].ch4;
+      document.getElementById("ch5").textContent = translations[lang].ch5;
+      document.getElementById("ch6").textContent = translations[lang].ch6;
+      document.getElementById("ch7").textContent = translations[lang].ch7;
+      document.getElementById("ch8").textContent = translations[lang].ch8;
+      document.getElementById("ch9").textContent = translations[lang].ch9;
+      document.getElementById("ch10").textContent = translations[lang].ch10;
+      document.getElementById("footer").textContent = translations[lang].footer;
+    }
+  </script>
+
+</body>
+</html>
